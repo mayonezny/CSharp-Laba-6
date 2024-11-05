@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace DOTNET_TITSHARP_LABO_六.EncryptionManager
+namespace DOTNET_TITSHARP_LABO_六.Crypto
 {
     public static class EncryptionManager
     {
