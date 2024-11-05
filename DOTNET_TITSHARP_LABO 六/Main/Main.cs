@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOTNET_TITSHARP_LABO_六.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,13 @@ using System.Threading.Tasks;
 
 namespace DOTNET_TITSHARP_LABO_六.Main
 {
-    public class Main
+    public class Program
     {
+        public static void Main()
+        {
+            var ui = new UserInterface();
+            ui.Start();
+        }
     }
+
 }
