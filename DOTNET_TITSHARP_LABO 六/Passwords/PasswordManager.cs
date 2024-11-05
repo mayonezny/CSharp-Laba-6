@@ -20,8 +20,29 @@ namespace DOTNET_TITSHARP_LABO_六.Passwords
             var record = records.Find(r => r.Label == label);
             if (record != null)
             {
-                records.Remove(record);
-                Console.WriteLine("Запись удалена.");
+                var decryptedPassword = EncryptionManager.Decrypt(record.EncryptedPassword);
+                Console.WriteLine("Введите пароль, чтобы удалить запись, нажмите 1 чтобы выйти в главное меню");
+                while (true)
+                {
+                    string input = Console.ReadLine();
+
+                    if(input == decryptedPassword)
+                    {
+                        records.Remove(record);
+                        Console.WriteLine("Запись удалена.");
+                        break;
+                    }
+                    else if(input == "1")
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Неверный пароль!");
+                    }
+                    
+                }
+                
             }
             else
             {
@@ -33,8 +54,7 @@ namespace DOTNET_TITSHARP_LABO_六.Passwords
         {
             foreach (var record in records)
             {
-                var decryptedPassword = EncryptionManager.Decrypt(record.EncryptedPassword);
-                Console.WriteLine($"Метка: {record.Label}, Пароль: {decryptedPassword}");
+                Console.WriteLine($"Метка: {record.Label}, Пароль: {record.EncryptedPassword}");
             }
         }
     }
