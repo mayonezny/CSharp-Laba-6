@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using DOTNET_TITSHARP_LABO_六.Crypto;
 
-namespace DOTNET_TITSHARP_LABO_六.PasswordManager
+namespace DOTNET_TITSHARP_LABO_六.Passwords
 {
     public class PasswordManager
     {

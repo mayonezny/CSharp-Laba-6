@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DOTNET_TITSHARP_LABO_六.PasswordManager
+namespace DOTNET_TITSHARP_LABO_六.Passwords
 {
     public class PasswordRecord
     {

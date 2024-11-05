@@ -1,5 +1,5 @@
 ﻿using System;
-
+using DOTNET_TITSHARP_LABO_六.Passwords;
 namespace DOTNET_TITSHARP_LABO_六.UI
 {
     public class UserInterface
