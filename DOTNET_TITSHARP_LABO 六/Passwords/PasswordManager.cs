@@ -9,10 +9,18 @@ namespace DOTNET_TITSHARP_LABO_六.Passwords
         private List<PasswordRecord> records = new List<PasswordRecord>();
 
         public void AddRecord(string label, string password)
-        {
-            var encryptedPassword = EncryptionManager.Encrypt(password);
-            records.Add(new PasswordRecord(label, encryptedPassword));
-            Console.WriteLine("Пароль успешно добавлен.");
+        {   
+            if (Verifier.VerifyPassword(password))
+            {
+                var encryptedPassword = EncryptionManager.Encrypt(password);
+                records.Add(new PasswordRecord(label, encryptedPassword));
+                Console.WriteLine("Пароль успешно добавлен.");
+            }
+            else
+            {
+                Console.WriteLine("Ошибка! Пароль не удовлетворяет условиям!");
+            }
+            
         }
 
         public void DeleteRecord(string label)
