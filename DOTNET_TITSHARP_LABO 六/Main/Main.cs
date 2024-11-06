@@ -12,3 +12,4 @@ namespace DOTNET_TITSHARP_LABO_六.Main
     }
 
 }
+//из 8 минимум и хотя бы 1 заглавная
